@@ -9,8 +9,8 @@ ensures that the tight timing requirements of the MCP3201 are met.
 
 - spi is an SPI object which has to be created by the caller. Just the Pins have to be assigned by the caller.
 The init method of the class sets baud rate, phase, polarity and word size.
-- baudrate defines the baud rate of the SPI. the default is 1000000.
-The valid range is 200kHz through 4 MHz. These boundaries are silently enforced by the class.
+- baudrate defines the baud rate of the SPI. the default is 800000.
+The valid range is 200kHz through 800 kHz. These boundaries are silently enforced by the class.
 - vref is the reference voltage, used to calculate the voltage value. Vref is only 
 used for the calculation of the equivalent voltage.
 
@@ -57,7 +57,7 @@ from MCP3201 import MCP3201
 
 spi = SPI(0, SPI.MASTER)
 vref = 3.3 # Assumed that Vdd is 3.3v and Vref is connected to Vdd
-ads = MCP3201(spi)
+ads = MCP3201(spi, vref=vref)
 
 while True:
     # start a conversion and get the result back
