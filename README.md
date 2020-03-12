@@ -1,4 +1,4 @@
-# ADS8718: Python class for the MCP3201 AD-converter
+# MCP3201: Python class for the MCP3201 AD-converter
 
 This is a very short and simple class. It uses the SPI bus for the interface. That
 ensures that the tight timing requirements of the MCP3201 are met.
