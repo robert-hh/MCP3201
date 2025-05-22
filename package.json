@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["mcp3201.py", "github:robert-hh/MCP3201/mcp3201.py"]
+  ],
+  "version": "1.0.0",
+  "deps": []
+}
